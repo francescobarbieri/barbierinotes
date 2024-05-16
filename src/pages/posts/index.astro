@@ -1,11 +1,12 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
 
-const allPosts = await Astro.glob('./*.mdx');
+const allPosts = await getCollection("posts");
 const postsByYear = {};
 
 for (const post of allPosts) {
-    const pubDate = post.frontmatter.pubDate;
+    const pubDate = post.data.pubDate;
 
     if (pubDate) {
         const year = new Date(pubDate).getFullYear();
@@ -29,9 +30,9 @@ const sortedPosts = Object.entries(postsByYear)
             <div class="-mb-3 mt-16 sm:mt-32">
                 <span class="mb-5 block font-medium sm:mb-6">{groupPost.year}</span>
                 {groupPost.posts.map(post => (
-                    <a href={post.url} class="-mx-4 flex flex-col rounded-md px-4 no-underline hover:bg-[#F5F4F4] dark:hover:bg-gray-200 sm:py-3">
-                        <span>{post.frontmatter.title}</span>
-                        <span class="text-gray-1100">{post.frontmatter.subTitle}</span>
+                    <a href={"/posts/" + post.slug} class="-mx-4 flex flex-col rounded-md px-4 no-underline hover:bg-[#F5F4F4] dark:hover:bg-gray-200 sm:py-3">
+                        <span>{post.data.title}</span>
+                        <span class="text-gray-1100">{post.data.description}</span>
                     </a>
                 ))}
             </div>
