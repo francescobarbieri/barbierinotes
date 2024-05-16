@@ -13,7 +13,14 @@ export default defineConfig({
     extendDefaultPlugins: false,
     rehypePlugins: [[rehypePrettyCode, {}]]
   },
-  integrations: [sitemap(), tailwind(), mdx()],
+  integrations: [
+    sitemap({
+      lastmod: new Date().toLocaleTimeString('en-CA',
+        {year: 'numeric', month: '2-digit', day: '2-digit'})
+      }),
+    tailwind(),
+    mdx()
+  ],
   output: "server",
   adapter: vercel({
     webAnalytics: {
