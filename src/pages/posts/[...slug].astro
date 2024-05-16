@@ -24,6 +24,7 @@ const { Content } = await entry.render();
 <Layout
     title={entry.data.title}
     description={entry.data.description}
+    url={"https://barbierinotes.com/posts/" + entry.slug}
 >
     <main>
         <Content />
