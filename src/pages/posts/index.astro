@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 
-const allPosts = await Astro.glob('./*.md');
+const allPosts = await Astro.glob('./*.mdx');
 const postsByYear = {};
 
 for (const post of allPosts) {

@@ -3,62 +3,31 @@ import Layout from '../layouts/Layout.astro';
 
 ---
 <Layout title="About me">
-    <div class="-mb-3 mt-16 sm:mt-32">
-        <p class="text-gray-1100">On a mission to build products developers love, and along the way, teach the next generation of developers. Here's a summary of my profile so far.</p>
-    </div>
+    <main>
+        <div class="-mb-3 mt-16 sm:mt-32 text-gray-1100">
+            <p>On a mission to build products developers love, and along the way, teach the next generation of developers. Here's a summary of my profile so far.</p>
+            <h2 class="mb-5 mt-16 font-semibold md:mt-16">Why a custom platform?</h2>
+            <p class="mt-4">I created a web portal that receives, displays and handles new customers, with the ability to sort, search, and integrate their workflow seamlessly into the program. It shows meaningful data regarding the customer’s origins and gives the company a tool to better direct their marketing efforts as well as their web presence among italian regions</p>
+        </div>
 
-    <div class="-mb-3 mt-16 sm:mt-32">
-        <span class="mb-5 block font-medium sm:mb-6">Education</span>
-        <ul class="my-6 ml-6 list-disc [&>li]:mt-2">
-            <li class="text-gray-1100">Philadelphia, PA: MS (Master's Degree in AI&ML). Relevant Coursework: Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, and Human-AI interaction</li>
-            <li class="text-gray-1100">Milan, Italy: BCS (Bachelors Degree in Computer Science). Relevant Coursework: Programming, Networks and Operating Systems, Programming Languages and Databases</li>
-        </ul>
-    </div>
-    <div class="-mb-3 mt-16 sm:mt-32">
-        <span class="mb-5 block font-medium sm:mb-6">Work Experiences</span>
-        <ul class="my-6 ml-6 list-disc [&>li]:mt-2">
-            <li>
-                🇮🇹 Google, Milan, Italy (Mar. 2021 - Jan. 2022)<br/>
-                <span class="text-gray-1100">
-                    My task is to maintain existing services, add new features on request, develop software and update their public website as well as their social presence as needed
-                </span>
-            </li>
-            <li>
-                🇮🇹 Jan. 2020 - Jun. 2020: i-TECH Srl, Sassari, Italy:<br/>
-                <span class="text-gray-1100">
-                    I created a web portal that receives, displays and handles new customers, with the ability to sort, search, and integrate their workflow seamlessly into the program. It shows meaningful data regarding the customer’s origins and gives the company a tool to better direct their marketing efforts as well as their web presence among italian regions
-                </span>
-            </li>
-        </ul>
-    </div>
+        <hr class="mt-32 opacity-15"/>
+        
+        <div class="-mb-3 mt-16 sm:mt-32">
+            <span class="block font-medium">Freelance</span>
+            <p class="text-gray-1100 text-sm mb-5">Web Developer</p>
 
-    <div class="-mb-3 mt-16 sm:mt-32">
-        <span class="block font-medium">Google</span>
-        <p class="text-gray-1100 text-sm mb-5">VP of Product</p>
+            <ul class="my-6 ml-6 list-disc [&>li]:mt-2 text-gray-1100">
+                <li>
+                    In 2021, I was promoted to Director of DevRel. We translated customer pain back into the product roadmap. We spoke at conferences, wrote blog posts, and created videos. We built open-source examples and contributed back to the product.
+                </li>
+                <li>
+                    In 2022, I was promoted to VP of Developer Experience, now also leading our product documentation team. My team created a new free course to teach Next.js, which had 17 million page views that year. I shipped. I partnered with our open-source community, collaborating with frameworks like Nuxt and Astro and sponsoring individuals and projects.
+                </li>
+            </ul>
 
-        <ul class="my-6 ml-6 list-disc [&>li]:mt-2 text-gray-1100">
-            <li>
-                In 2021, I was promoted to Director of DevRel. We translated customer pain back into the product roadmap. We spoke at conferences, wrote blog posts, and created videos. We built open-source examples and contributed back to the product.
-            </li>
-            <li>
-                In 2022, I was promoted to VP of Developer Experience, now also leading our product documentation team. My team created a new free course to teach Next.js, which had 17 million page views that year. I shipped. I partnered with our open-source community, collaborating with frameworks like Nuxt and Astro and sponsoring individuals and projects.
-            </li>
-        </ul>
-
-        <p class="mt-4 text-gray-1100">
-            Since I joined Vercel in 2020, Next.js active developers have grown 1000%, now at ~900k. Next.js is now a top 10 software project on GitHub with 121k stars. It's used by Walmart, ChatGPT, Starbucks, Okta, Datastax, Notion, and more.
-        </p>
-    </div>
-
-    <div class="-mb-3 mt-16 sm:mt-32">
-        <span class="mb-5 block font-medium sm:mb-6">More</span>
-        <ul class="my-6 ml-6 list-disc [&>li]:mt-2 text-gray-1100">
-            <li>
-                <a href="#" class="underline">Linkedin</a>
-            </li>
-            <li>
-                <a href="#" class="underline">CV</a>
-            </li>
-        </ul>
-    </div>
+            <p class="mt-4 text-gray-1100">
+                Since I joined Vercel in 2020, Next.js active developers have grown 1000%, now at ~900k. Next.js is now a top 10 software project on GitHub with 121k stars. It's used by Walmart, ChatGPT, Starbucks, Okta, Datastax, Notion, and more.
+            </p>
+        </div>
+    </main>
 </Layout>
