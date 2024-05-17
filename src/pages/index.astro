@@ -2,47 +2,85 @@
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
-const allPosts = await getCollection("posts");
+const allPosts = await getCollection('posts');
 
 allPosts.sort(
-	(a, b) => new Date(b.data.publishedDate) - new Date(a.data.publishedDate)
+    (a, b) => new Date(b.data.publishedDate) - new Date(a.data.publishedDate)
 );
 
 const posts = allPosts.slice(0, 6);
-
 ---
 
 <Layout title="Barbieri Notes">
-	<main>
-		<div>
-			<span class="mb-5 block font-semibold sm:mb-6">Today</span>
-			<p class="text-gray-1100">I'm a Computer Science student at the University of Milano-Bicocca. Currently working as a Freelance Developer while studying.</p>
-			<p class="mt-4 text-gray-1100">I want to build cool things. Learn more about me <a href="/about" class="underline">here</a>.</p>
-		</div>
+    <main>
+        <div>
+            <span class="mb-5 block font-semibold sm:mb-6">Today</span>
+            <p class="text-gray-1100">
+                I'm a Computer Science student at the University of
+                Milano-Bicocca. Currently working as a Freelance Developer while
+                studying.
+            </p>
+            <p class="mt-4 text-gray-1100">
+                I want to build cool things. Learn more about me <a
+                    href="/about"
+                    class="underline">here</a
+                >.
+            </p>
+        </div>
 
-		<div class="-mb-3 mt-16 sm:mt-32">
-			<span class="mb-5 block font-semibold sm:mb-6">Essay</span>
-			<div class="flex flex-col gap-7 sm:gap-4">
-				{
-					posts.map(post => (
-						<a href={"/posts/" + post.slug} class="-mx-4 flex flex-col rounded-md px-4 no-underline hover:bg-[#F5F4F4] dark:hover:bg-gray-200 sm:py-3">
-							<span>{post.data.title}</span>
-							<span class="text-gray-1100">{post.data.description}</span>
-						</a>
-					))
-				}
-			</div>
-			<p class="mt-6 text-gray-1100">
-				<a href="/posts" class="underline flex items-center gap-2">All essays
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-right"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
-				</a>
-			</p>
-		</div>
+        <div class="-mb-3 mt-16 sm:mt-32">
+            <span class="mb-5 block font-semibold sm:mb-6">Essay</span>
+            <div class="flex flex-col gap-7 sm:gap-4">
+                {
+                    posts.map((post) => (
+                        <a
+                            href={'/posts/' + post.slug}
+                            class="-mx-4 flex flex-col rounded-md px-4 no-underline hover:bg-[#F5F4F4] dark:hover:bg-gray-200 sm:py-3"
+                        >
+                            <span>{post.data.title}</span>
+                            <span class="text-gray-1100">
+                                {post.data.description}
+                            </span>
+                        </a>
+                    ))
+                }
+            </div>
+            <p class="mt-6 text-gray-1100">
+                <a href="/posts" class="underline flex items-center gap-2"
+                    >All essays
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-move-right"
+                        >
+                            <path d="M18 8L22 12L18 16"></path><path d="M2 12H22"></path>
+                    </svg>
+                </a>
+            </p>
+        </div>
 
-		<div class="-mb-3 mt-16 sm:mt-32">
-			<span class="mb-5 block font-semibold sm:mb-6">More</span>
-			<p class="text-gray-1100">You can see more of my work on <a href="https://twitter.com/intent/user?screen_name=realBarbieri" target="_blank" class="underline">X (Twitter)</a> or more of my code on <a href="https://github.com/francescobarbieri" target="_blank" class="underline">GitHub.</a></p>
-			<p class="mt-4 text-gray-1100">Subscribe to <a href="/rss.xml" class="underline">RSS feed</a>.</p>
-		</div>
-	</main>
+        <div class="-mb-3 mt-16 sm:mt-32">
+            <span class="mb-5 block font-semibold sm:mb-6">More</span>
+            <p class="text-gray-1100">
+                You can see more of my work on <a
+                    href="https://twitter.com/intent/user?screen_name=realBarbieri"
+                    target="_blank"
+                    class="underline">X (Twitter)</a
+                > or more of my code on <a
+                    href="https://github.com/francescobarbieri"
+                    target="_blank"
+                    class="underline">GitHub.</a>
+            </p>
+            <p class="mt-4 text-gray-1100">
+                Subscribe to <a href="/rss.xml" class="underline">RSS feed</a>.
+            </p>
+        </div>
+    </main>
 </Layout>
