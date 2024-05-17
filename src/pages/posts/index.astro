@@ -6,7 +6,7 @@ const allPosts = await getCollection("posts");
 const postsByYear = {};
 
 for (const post of allPosts) {
-    const pubDate = post.data.pubDate;
+    const pubDate = post.data.publishedDate;
 
     if (pubDate) {
         const year = new Date(pubDate).getFullYear();
