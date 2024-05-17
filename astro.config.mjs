@@ -14,10 +14,7 @@ export default defineConfig({
     rehypePlugins: [[rehypePrettyCode, {}]]
   },
   integrations: [
-    sitemap({
-      lastmod: new Date().toLocaleTimeString('en-CA',
-        {year: 'numeric', month: '2-digit', day: '2-digit'})
-      }),
+    sitemap(),
     tailwind(),
     mdx()
   ],
