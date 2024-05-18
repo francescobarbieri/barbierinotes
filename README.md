@@ -16,3 +16,8 @@ My current personal websites repository. Available at [barbierinotes.com](https:
 - Deployment: [Vercel](https://vercel.com)
 - Styling: [Tailwind CSS](https://tailwindcss.com)
 - Analytics: [Vercel Analytics](https://vercel.com)
+
+## License
+Feel free to take inspiration from this code.
+Crediting the author is appreciated.
+No complicated licensing. Be kind and help others learn.
