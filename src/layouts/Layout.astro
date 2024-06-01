@@ -10,7 +10,7 @@ const {
 	title = "Barbieri Notes",
 	description = "Francesco Barbieri's personal website.",
 	url = "https://barbierinotes.com/",
-	pageImage = "https://barbierinotes.com/img/ogImage.png"
+	pageImage = "https://www.barbierinotes.com/img/ogImage.png"
 } = Astro.props;
 ---
 
@@ -31,6 +31,7 @@ const {
 		<meta property="og:site_name" content={title}>
 		<meta property="og:locale" content="en_US">
 		<meta property="og:type" content="website">
+		<meta property="og:image" content={pageImage}>
 
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:site" content="@realBarbieri">
