@@ -20,7 +20,10 @@ const posts = allPosts.reduce((acc, post) => {
 
 ---
 
-<Layout title="Posts">
+<Layout
+    title="Posts"
+    url='https://www.barbierinotes.com/posts'
+    >
     {
         Object.entries(posts).map(([year, items]) => (
             <div class="-mb-3 mt-16 sm:mt-32">
