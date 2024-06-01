@@ -4,13 +4,14 @@ interface Props {
 	description?: string;
 	url?: string;
 	pageImage?: string;
+	canonical?: string;
 }
 
 const { 
 	title = "Barbieri Notes",
 	description = "Francesco Barbieri's personal website.",
-	url = "https://barbierinotes.com/",
-	pageImage = "https://www.barbierinotes.com/img/ogImg.png"
+	url = "https://www.barbierinotes.com",
+	pageImage = "https://www.barbierinotes.com/img/ogImg.png",
 } = Astro.props;
 ---
 
@@ -23,6 +24,7 @@ const {
 		<meta name="author" content="Francesco Barbieri">
 		<meta name="keywords" content="Francesco Barbieri, Barbieri Notes, Tech, Software Engineer">
 
+		<link rel="canonical" href={url}>
 		<link rel="alternate" type="application/rss+xml" title={title} href={`${Astro.site}rss.xml`}/>
 
 		<meta property="og:title" content={title}>
