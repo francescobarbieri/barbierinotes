@@ -3,7 +3,7 @@ export default function Header() {
     <h1 className="font-medium pt-12 transition-element mb-6">
       <span className="sr-only">Barbieri Notes</span>
       <span aria-hidden="true" className="block overflow-hidden group relative">
-        <span className="inline-block transition-all duration-300 ease-in-out group-hover:-translate-y-full">
+        <span className="inline-block transition-all duration-300 ease-in-out group-hover:-translate-y-full whitespace-nowrap">
           {'Francesco Barbieri'.split('').map((letter, index) => (
             <span
               key={index}
