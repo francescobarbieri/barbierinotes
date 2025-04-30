@@ -54,7 +54,7 @@ export default function RootLayout({
 
 function Footer() {
   const links = [
-    { name: '@barbierinotes', url: 'https://x.com/intent/user?screen_name=barbierinotes' },
+    { name: '@fmbarbieri', url: 'https://x.com/intent/user?screen_name=fmbarbieri' },
     { name: 'linkedin', url: 'https://www.linkedin.com/in/barbieri-francesco' },
     { name: 'github', url: 'https://github.com/francescobarbieri' },
   ];
