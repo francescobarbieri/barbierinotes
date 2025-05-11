@@ -1,7 +1,7 @@
-import React, {ComponentPropsWithoutRef} from 'react';
-import type {MDXComponents} from 'mdx/types';
-import { highlight } from 'sugar-high';
 import Link from 'next/link';
+import { highlight } from 'sugar-high';
+import type {MDXComponents} from 'mdx/types';
+import React, {ComponentPropsWithoutRef} from 'react';
 
 type HeadingProps     = ComponentPropsWithoutRef<'h1'>;
 type ParagraphProps   = ComponentPropsWithoutRef<'p'>;
