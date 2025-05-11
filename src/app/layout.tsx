@@ -1,8 +1,7 @@
+import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { ViewTransitions } from 'next-view-transitions';
 import { Analytics } from '@vercel/analytics/next';
-import './globals.css';
 
 const inter = Inter({subsets: ['latin']});
 
@@ -38,17 +37,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ViewTransitions>
-      <html lang="en" className={inter.className}>
-        <body className="antialiased tracking-tight">
-          <div className="min-h-svh flex flex-col justify-between pt-0 md:pt-8 p-8 bg-white text-gray-900">
-            <main className="max-w-[60ch] mx-auto w-full">{children}</main>
-            <Footer />
-          </div>
+    <html lang="en" className={inter.className}>
+      <body className="antialiased tracking-tight">
+        <div className="min-h-svh flex flex-col justify-between pt-0 md:pt-8 p-8 bg-white text-gray-900">
+          <main className="max-w-[60ch] mx-auto w-full">{children}</main>
+          <Footer />
           <Analytics />
-        </body>
-      </html>
-    </ViewTransitions>
+        </div>
+      </body>
+    </html>
   );
 }
 
