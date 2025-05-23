@@ -1,4 +1,4 @@
-import AnimatedHeader from '../n/animated-header.tsx';
+import Header from '../header';
 
 export const metadata = {
   title: 'Work',
@@ -8,17 +8,28 @@ export const metadata = {
 }
 
 export function Small({ children }) {
-  return (
-    <small className="flex text-sm text-gray-500 -mt-3 mb-3">{children}</small>
-  );
+  return ( <small className="flex text-sm text-gray-500 -mt-3 mb-3">{children}</small> );
 }
 
-# Work
+export function Separator() {
+  return ( <> <hr className="mt-8" /> </> );
+}
 
-<AnimatedHeader />
+<Header title='Work' />
 
-Here's a summary of my work so far:
+[comment]: <> ([Open CV](https://barbierinotes/cv.pdf)
 
-## Göllmann Agency
+## Freelance
 <Small>Software Engineer, 2022 - Current</Small>
-Managing all IT operations, I take full responsibility for delivering reliable, company-wide solutions that align with clients' strategic objectives. I have developed high-quality, custom-built websites and e-commerce platforms for Italian companies and notable content creators. Collaborating closely with designers, I develop responsive frontends and engineer robust backend logics ensuring scalability, performance and SEO optimization for high-traffic environments.
+I took full responsibility for delivering reliable solutions that align with clients' strategic objectives. I have developed high-quality custom-built websites and e-commerce platforms for Italian companies. Collaborating closely with designers, I develop responsive frontends and engineer robust backend logics ensuring scalability, performance and SEO optimization for high-traffic environments.
+
+<Separator />
+
+## Education
+- BSc in Computer Science @ [Unimib](https://www.unimib.it/)
+
+<Separator />
+
+## Certifications
+- Structuring Companies for Growth @ [SDA Bocconi](https://www.sdabocconi.it/en/home)
+- First Certificate B2 @ Cambridge English
